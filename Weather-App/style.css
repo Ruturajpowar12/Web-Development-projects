@@ -32,7 +32,7 @@ body {
     width: 80%;
     padding: 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     outline: none;
     font-size: 16px;
 }
@@ -42,11 +42,16 @@ body {
     margin-right: 10px;
     padding: 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: #fff;
     color: #222;
     font-size: 16px;
     cursor: pointer;
+}
+
+.search button img {
+    width: 20px;
+    height: 20px;
 }
 
 .weather-info {
@@ -56,10 +61,34 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    padding: 20px;
 }
 
 .weather-info img {
-    width: 200px;
-    height: 200px;
-    background: transparent
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather-info .temp {
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.weather-info .city {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
 }
