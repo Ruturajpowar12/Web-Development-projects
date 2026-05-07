@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #0f0b5e, #441356);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.heading {
+    display: flex;
+    align-items: start;
+    color: #441356;
+}
+
+.heading img {
+    width: 30px;
+    margin-left: 10px;
+}
