@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" type="module"></script>
+    <script src="script.js"></script>
 </head>
 
 <div class="container">
@@ -16,14 +16,14 @@
 
         <div class="input-container">
             <input type="text" id="task-input" placeholder="Add your task">
-            <button id="add-task-btn">Add</button>
+            <button id="add-task-btn" onclick="addTask()">Add</button>
         </div>
 
 
         <ul id="list-container">
-            <li class="checked"> task 1</li>
+            <!-- <li class="checked"> task 1</li>
             <li> task 2</li>
-            <li> task 3</li>
+            <li> task 3</li> -->
         </ul>
 
     </div>
