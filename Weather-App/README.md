@@ -53,9 +53,21 @@ open index.html
 
 ## API Key
 
-This project uses the OpenWeatherMap API. The API key is already configured in `script.js`. For production use, consider:
-- Moving the API key to environment variables
-- Using a backend server to hide sensitive keys
+This project uses the OpenWeatherMap API. The API key is stored in `config.js` (which is ignored by Git) to keep it secure and prevent accidental commits to version control.
+
+### Setup Instructions:
+1. Get your free API key from [OpenWeatherMap](https://openweathermap.org/api)
+2. Create a `config.js` file in the root directory
+3. Add your API key to the config file:
+   ```javascript
+   const config = {
+       apiKey: "YOUR_API_KEY_HERE"
+   };
+   export default config;
+   ```
+4. The `config.js` file is automatically ignored by Git (see `.gitignore`)
+
+**Important**: Never commit `config.js` to your repository. The API key will be visible in browser developer tools, but keeping it out of version control prevents accidental exposure.
 
 ## Browser Compatibility
 
