@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+button{
+    height: 60px;
+    width: 140px;
+    border-radius: 10px; 
+    font-size: 15px;
+    font-weight: 600; 
+    outline: none;
+    box-shadow: 10px 10px 27px 0px rgba(0,0,0,0.2);
+    color: white;
+    border: none;
+    background-color: #030c49;
+    cursor: pointer;
+    transition:  transform 0.3s ease-in;
+}
+ button:hover{
+    transform: scale(1.05);
+ }
