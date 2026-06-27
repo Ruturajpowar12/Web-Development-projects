@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0f7ef4, #cddffb);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  width: 600px;
+  padding: 10px;
+  border-radius: 7px;
+  box-shadow: 0px 10px 17px rgba(0, 0, 0, 0.2);
+}
+.container h1 {
+  text-align: center;
+  margin: 20px 40px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 200;
+  color: #0578f4;
+  font-size: 38px;
+  line-height: 4rem;
+  border-bottom: 5px rgb(133, 135, 135) solid;
+}
+
+.container #generate {
+  margin: 10px 0 20px 18px;
+  height: 38px;
+  width: 190px;
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1d88fa, #2a02b8);
+}
+
+.palette-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 10px;
+}
+.color-box {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyColor {
+  display: none;
+}
+
+.copyColorDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 45px;
+  margin: 20px 30px;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 10px 17px rgba(0, 0, 0, 0.2);
+}
