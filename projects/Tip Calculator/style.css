@@ -49,6 +49,7 @@ body {
   height: 36px;
   border-radius: 5px;
   outline: none;
+  font-weight: 600;
   padding-left: 10px;
   border: 1px gray solid;
 }
@@ -71,9 +72,32 @@ button:hover {
   transform: scale(0.98);
   background-color: #f50498;
 }
+.info {
+  display: flex;
+  gap: 20px;
+}
 
+.info span {
+  font-size: 20px;
+  font-weight: 700;
+}
 .info p {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .container h3 {
+    font-size: 16px;
+  }
+
+  .info p,
+  .info span {
+    font-size: 19px;
+  }
 }
