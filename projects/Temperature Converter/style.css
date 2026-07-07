@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #79f5b7, #f3f6e6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.converter-card {
+  background: #ffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
