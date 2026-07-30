@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(244, 232, 209);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+body h1 {
+  color: rgb(123, 82, 5);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+}
+.inputBox {
+  background-color: white;
+  width: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.1);
+}
+.inputBox input {
+  margin: 10px 30px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(246, 166, 17);
+  outline: none;
+  font-size: 16px;
+}
+
+.inputBox button {
+  margin: 0px 30px 10px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(243, 174, 44);
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+.inputBox button:hover {
+  background-color: rgb(225, 149, 6);
+}
+
+.taskBox {
+  background-color: white;
+  width: 500px;
+  padding: 20px 20px;
+
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.1);
+}
+.taskBox ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 10px;
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 1px solid gray;
+}
+
+.taskBox ul li button {
+  height: 25px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  outline: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.taskBox ul li button:hover {
+  transform: scale(0.95);
+}
