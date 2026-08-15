@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #ef32d9, #89fffd);
+}
+h1 {
+  margin: 50px 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  color: #fff;
+  text-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  background-color: #fff;
+  width: 550px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container #expense {
+  margin: 10px 10px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 8px;
+  font-size: 17px;
+  color: #c304ad;
+}
+
+.container #expense:focus {
+  border: 2px solid #ef32d9;
+}
+
+.container #desc {
+  margin: 10px 10px 20px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 8px;
+  font-size: 17px;
+  color: #c304ad;
+}
+
+.container #desc:focus {
+  border: 2px solid #ef32d9;
+}
+
+.container #addbtn {
+  margin: 0px 10px 20px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 17px;
+  color: #fff;
+  background-color: #ef32d9;
+  font-weight: 700;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container #addbtn:active {
+  transform: scale(1.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.totalbox {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #a1048f;
+  margin-bottom: 10px;
+
+  padding-bottom: 10px;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  padding: 10px 20px;
+  list-style: none;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+ul li span:first-child {
+  flex: 1;
+}
+
+ul li button {
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: red;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
