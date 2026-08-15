@@ -7,35 +7,38 @@ let total = 0;
 
 function getData() {
   //input field requred
-  if (inputExpense.value === "") {
-    alert("Please enter expense amount");
+  if (inputExpense === "") {
+    alert("please enter your expense amount");
     return;
   }
-  if (inputDesc.value === "") {
-    alert("Please Enter Expense Description");
+  if (inputDesc === "") {
+    alert("please enter your expense description");
+    return;
   }
 
-  //get input values
-  const amount = Number(inputExpense.value);
+  // getting input values
+  const expenseAmount = Number(inputExpense.value);
   const description = inputDesc.value;
 
-  //create list
+  //create a  expense list
   const li = document.createElement("li");
+  li.innerHTML = `${expenseAmount}<span>${description}</span>`;
 
-  li.innerHTML = `<li>${description}<span>&#8377;${amount}</span>`;
+  //create delete button
+  const delBtn = document.createElement("button");
+  delBtn.innerText = "Delete";
 
-  const delbtn = document.createElement("button");
-  delbtn.innerText = "Delete";
-
-  li.appendChild(delbtn);
-
+  //adding btn into list
+  li.appendChild(delBtn);
   expenseList.appendChild(li);
-  //print total
-  total += amount;
+
+  //calculate total
+  total += expenseAmount;
   totalExpense.innerText = total;
 
-  delbtn.addEventListener("click", () => {
-    total -= amount;
+  //delete amount and expense in list
+  delBtn.addEventListener("click", () => {
+    total -= expenseAmount;
     totalExpense.innerText = total;
     li.remove();
   });
