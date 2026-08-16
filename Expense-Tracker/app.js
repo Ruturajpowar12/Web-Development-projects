@@ -3,50 +3,88 @@ const totalExpense = document.getElementById("total");
 const inputDesc = document.querySelector("#desc");
 const btn = document.querySelector("#addbtn");
 const expenseList = document.querySelector(".expense-list");
+
+let expenses = [];
 let total = 0;
 
-function getData() {
-  //input field requred
-  if (inputExpense === "") {
-    alert("please enter your expense amount");
-    return;
-  }
-  if (inputDesc === "") {
-    alert("please enter your expense description");
-    return;
-  }
+function saveData() {
+  localStorage.setItem("expenses", JSON.stringify(expenses));
+}
 
-  // getting input values
-  const expenseAmount = Number(inputExpense.value);
-  const description = inputDesc.value;
+function calculationTotal() {
+  total = expenses.reduce((sum, expense) => {
+    return sum + expense.amount;
+  }, 0);
+  totalExpense.innerText = total;
+}
 
-  //create a  expense list
+// Display expense
+function displayExpense(expense) {
   const li = document.createElement("li");
-  li.innerHTML = `${expenseAmount}<span>${description}</span>`;
 
-  //create delete button
+  li.innerHTML = `${expense.description}<span>₹${expense.amount}</span>`;
+
   const delBtn = document.createElement("button");
   delBtn.innerText = "Delete";
 
-  //adding btn into list
   li.appendChild(delBtn);
   expenseList.appendChild(li);
 
-  //calculate total
-  total += expenseAmount;
-  totalExpense.innerText = total;
-
-  //delete amount and expense in list
   delBtn.addEventListener("click", () => {
-    total -= expenseAmount;
-    totalExpense.innerText = total;
+    expenses = expenses.filter((item) => item.id !== expense.id);
+
+    saveData();
     li.remove();
+    calculationTotal();
   });
+}
+
+// Add expense
+function getData() {
+  if (inputExpense.value === "") {
+    alert("please enter expense amount");
+    return;
+  }
+
+  if (inputDesc.value === "") {
+    alert("please enter expense description");
+    return;
+  }
+
+  let amount = Number(inputExpense.value);
+  let description = inputDesc.value;
+
+  let expense = {
+    id: Date.now(),
+    amount: amount,
+    description: description,
+  };
+  expenses.push(expense);
+  saveData();
+
+  displayExpense(expense);
+
+  calculationTotal();
 
   inputExpense.value = "";
   inputDesc.value = "";
 }
+// Load data
 
-btn.addEventListener("click", () => {
-  getData();
-});
+function loadData() {
+  const data = localStorage.getItem("expenses");
+
+  if (data) {
+    expenses = JSON.parse(data);
+  }
+
+  expenses.forEach((expense) => {
+    displayExpense(expense);
+  });
+
+  calculationTotal();
+}
+
+btn.addEventListener("click", getData);
+
+loadData();
